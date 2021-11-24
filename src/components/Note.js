@@ -5,11 +5,14 @@ function Note({note, deleteNote}) {
   const handleDelete = () => {
     deleteNote(note.id);
   };
+  const getDate = (date) => {
+    return new Date(note.date).toLocaleDateString();
+  }
   return (
     <div className="note">
       <span>{note.text}</span>
       <div className="note-footer">
-        <small>{note.date.toLocaleDateString()}</small>
+        <small>{getDate()}</small>
         <MdDeleteForever className="delete-icon" size= "1.3em" onClick={handleDelete}/>
       </div>
     </div>

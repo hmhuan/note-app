@@ -1,31 +1,20 @@
 import Note from "./Note";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../public/css/NoteList.css";
 import AddingNote from "./AddingNote";
 
 function NodeList({searchText}) {
+  const keyNotes = "note-lists-item";
   const getDate = (delimeter = "/") => {
     const date = new Date();
     return date;
   };
 
-  const [notes, setNotes] = useState([
-    {
-      id: 1,
-      text: "Hello World",
-      date: getDate(),
-    },
-    {
-      id: 2,
-      text: "Hello World",
-      date: getDate(),
-    },
-    {
-      id: 3,
-      text: "Hello World",
-      date: getDate(),
-    },
-  ]);
+  const [notes, setNotes] = useState(localStorage.getItem(keyNotes) ? JSON.parse(localStorage.getItem(keyNotes)) : []);
+
+  useEffect(() => {
+    localStorage.setItem(keyNotes, JSON.stringify(notes));
+  }, [notes]);
 
   const addNote = (text) => {
     const note = {
