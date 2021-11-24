@@ -23,3 +23,23 @@ input:focus {
 .search-icon {
     size: 1.3em;
 }
+
+.toggle-on:hover{
+    cursor: pointer;
+}
+
+.toggle-on {
+    background-color: rosybrown;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.toggle-off:hover {
+    cursor: pointer;
+}
+
+.toggle-off {
+    background-color: rosybrown;
+    border-radius: 10px;
+    padding: 5px;
+}
