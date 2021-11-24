@@ -1,1 +1,5 @@
-Note app
+# Note app
+
+yarn install
+
+yarn start
