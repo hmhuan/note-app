@@ -1,0 +1,51 @@
+.note {
+    background-color: rgba(248, 183, 248, 0.933);
+    padding: 1rem;
+    border-radius: 10px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+.note-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.delete-icon {
+    size: 5em;
+}
+
+.delete-icon:hover {
+    cursor: pointer;
+}
+
+.note.new {
+    background-color: aquamarine;
+}
+
+textarea {
+    border: none;
+    resize: none;
+    background-color: aquamarine;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.save {
+    background-color: rgb(208, 243, 231);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.save:hover {
+    background-color: rgb(232, 247, 241);
+    cursor: pointer;
+}
