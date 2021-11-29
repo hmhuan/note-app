@@ -34,7 +34,7 @@ function NodeList({searchText}) {
       <AddingNote adddNote={addNote}/>
       {notes.filter((note) => {
         if (searchText.trim().length > 0) {
-          return !note.text.toLowerCase().includes(searchText);
+          return note.text.toLowerCase().includes(searchText);
         }
         return true;
       }).map((note) => (<Note key={note.id} note={note} deleteNote={deleteNote}/>))}
